@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>エクセルサンプル</title>
+    </head>
+    <body>
+        <h1>サンプル</h1>
+        <table id="sample">
+            <tr>
+                <th>項目1</th>
+                <th>項目２</th>
+            </tr>
+            <tr>
+                <td>hogehoge</td>
+                <td>fugafuga</td>
+            </tr>
+        </table>
+
+        <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+        <script>
+            const wb = XLSX.utils.table_to_book(document.getElementById("sample"));
+            XLSX.writeFile(wb, "サンプル.xlsx");
+        </script>
+    </body>
+</html>
+
